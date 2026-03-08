@@ -39,8 +39,8 @@ const Index = () => {
       <div className="max-w-2xl mx-auto px-6 py-16 space-y-16">
         {/* Hero */}
         <section className="space-y-6">
-          <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-card shadow-md">
-            <img src={andrewPortrait} alt="Andrew" className="w-full h-full object-cover" />
+          <div className="w-28 h-28 overflow-hidden">
+            <img src={andrewPortrait} alt="Andrew" className="w-full h-full object-cover" style={{ transform: 'scaleX(-1)' }} />
           </div>
           <div className="space-y-2">
             <h1 className="font-heading text-6xl md:text-7xl leading-[0.95] text-foreground">
