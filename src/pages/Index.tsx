@@ -39,15 +39,15 @@ const Index = () => {
       <div className="max-w-2xl mx-auto px-6 py-16 space-y-16">
         {/* Hero */}
         <section className="space-y-6">
-          <div className="w-28 h-28 overflow-hidden">
-            <img src={andrewPortrait} alt="Andrew" className="w-full h-full object-cover" style={{ transform: 'scaleX(-1)' }} />
+          <div className="overflow-hidden">
+            <img src={andrewPortrait} alt="Andrew" className="w-32 h-auto object-contain" style={{ transform: 'scaleX(-1)' }} />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-4">
             <h1 className="font-heading text-6xl md:text-7xl leading-[0.95] text-foreground">
               I'm Andrew
             </h1>
             <p className="text-lg text-muted-foreground">
-              I'm a builder, marketer, and product guy
+              I'm a builder, designer, and product leader focusing on creating a happier, healthier future
             </p>
           </div>
           <div className="flex gap-3">
