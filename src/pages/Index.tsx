@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PortfolioModal from "@/components/PortfolioModal";
-import heroImageSplit from "@/assets/hero-image-split.jpg";
+import andrewPortrait from "@/assets/andrew-portrait.png";
 
 const portfolioItems: Record<string, { title: string; description: string }> = {
   aemc: {
@@ -36,137 +36,116 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero */}
-      <section className="min-h-screen grid lg:grid-cols-2 grid-cols-1">
-        {/* Left — Content */}
-        <div className="flex items-center px-8 md:px-16 lg:px-20 py-20 lg:py-0">
-          <div className="max-w-xl space-y-6">
-            <h1 className="font-heading text-7xl md:text-8xl lg:text-9xl leading-[0.9] text-foreground">
+      <div className="max-w-2xl mx-auto px-6 py-16 space-y-16">
+        {/* Hero */}
+        <section className="space-y-6">
+          <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-card shadow-md">
+            <img src={andrewPortrait} alt="Andrew" className="w-full h-full object-cover" />
+          </div>
+          <div className="space-y-2">
+            <h1 className="font-heading text-6xl md:text-7xl leading-[0.95] text-foreground">
               I'm Andrew
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               I'm a builder, marketer, and product guy
             </p>
-            <div className="flex gap-5 pt-2">
-              <a href="https://www.linkedin.com/in/andrewwilliamscanada/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">LinkedIn</a>
-              <a href="https://resetskillpoints.substack.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Substack</a>
-              <a href="https://x.com/andrew_reset" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">X</a>
-            </div>
           </div>
-        </div>
+          <div className="flex gap-3">
+            <a href="https://www.linkedin.com/in/andrewwilliamscanada/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card transition-colors">
+              <span className="text-sm font-semibold">in</span>
+            </a>
+            <a href="https://x.com/andrew_reset" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card transition-colors">
+              <span className="text-sm font-semibold">𝕏</span>
+            </a>
+            <a href="https://resetskillpoints.substack.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card transition-colors">
+              <span className="text-sm font-semibold">S</span>
+            </a>
+          </div>
+        </section>
 
-        {/* Right — Image */}
-        <div
-          className="min-h-[50vh] lg:min-h-screen bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImageSplit})` }}
-        />
-      </section>
-
-      {/* Current Focus */}
-      <section className="py-20 px-8 md:px-16 lg:px-20 border-t border-border">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <h2 className="font-heading text-5xl md:text-6xl text-foreground">Current Focus</h2>
-
-          <div className="space-y-8">
-            <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-foreground">Founder @ <span className="text-primary">Heyday</span></h3>
+        {/* Current Focus */}
+        <section className="space-y-4">
+          <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Current Focus</h2>
+          <div className="space-y-4">
+            <div className="bg-card rounded-xl p-6 space-y-2">
+              <h3 className="text-xl font-semibold text-foreground">Founder @ <span className="text-foreground">Heyday</span></h3>
               <p className="text-muted-foreground leading-relaxed">
                 A product studio building tools to help people reclaim their attention in a manipulative digital world.
               </p>
             </div>
-
-            <div className="space-y-2">
+            <div className="bg-card rounded-xl p-6 space-y-2">
               <h3 className="text-xl font-semibold text-foreground">
-                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Toronto Product Management Association</a>
+                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="hover:underline">Toronto Product Management Association</a>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 The largest product management association in Canada, serving 2500 product leaders and managers in the GTA.
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Formerly */}
-      <section className="py-20 px-8 md:px-16 lg:px-20 bg-card border-t border-border">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <h2 className="font-heading text-5xl md:text-6xl text-foreground">Formerly</h2>
+        {/* Formerly */}
+        <section className="space-y-4">
+          <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Formerly</h2>
+          <div className="bg-card rounded-xl p-6">
+            <ul className="space-y-3 text-foreground">
+              <li>
+                Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical City</a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical Impression</a>
+              </li>
+              <li>
+                Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The Downtown Defrost Music & Arts Festival</a>
+              </li>
+              <li>
+                Co-Founder @ <button onClick={() => openModal("aemc")} className="text-primary hover:underline">The Alberta Electronic Music Conference</button>
+              </li>
+              <li>
+                Co-Founder @ <button onClick={() => openModal("vems")} className="text-primary hover:underline">The Virtual Electronic Music Summit</button>
+              </li>
+              <li>
+                Co-Founder @ <a href="https://nightvisionmusic.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music</a>
+              </li>
+              <li>
+                Co-Founder @ <a href="https://nvmastudio.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music Academy</a>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-          <ul className="space-y-4 text-lg">
-            <li className="text-foreground">
-              Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical City</a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical Impression</a>
-            </li>
-            <li className="text-foreground">
-              Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The Downtown Defrost Music & Arts Festival</a>
-            </li>
-            <li className="text-foreground">
-              Co-Founder @ <button onClick={() => openModal("aemc")} className="text-primary hover:underline">The Alberta Electronic Music Conference</button>
-            </li>
-            <li className="text-foreground">
-              Co-Founder @ <button onClick={() => openModal("vems")} className="text-primary hover:underline">The Virtual Electronic Music Summit</button>
-            </li>
-            <li className="text-foreground">
-              Co-Founder @ <a href="https://nightvisionmusic.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music</a>
-            </li>
-            <li className="text-foreground">
-              Co-Founder @ <a href="https://nvmastudio.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music Academy</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Side Quests */}
-      <section className="py-20 px-8 md:px-16 lg:px-20 border-t border-border">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <h2 className="font-heading text-5xl md:text-6xl text-foreground">Side Quests</h2>
-
-          <ul className="space-y-4 text-lg">
-            <li className="text-foreground">
-              Host / Moderator / Curator @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">TPMA</a>'s monthly meet-up <span className="text-muted-foreground">2022–2025</span>
-            </li>
-            <li className="text-foreground">
-              Podcast Guest @ <a href="https://www.youtube.com/watch?v=TEDtkkQxKtU" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Prompt & Circumstance</a>
-            </li>
-            <li className="text-foreground">
-              Speaker @ Fuckup Nights Toronto — <a href="https://www.youtube.com/watch?v=q9uwKIoQk6M" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">"The Worst Job I've Ever Had"</a>
-            </li>
-            <li className="text-foreground">
-              Featured Artist @ <button onClick={() => openModal("wired")} className="text-primary hover:underline">Wired Magazine 2022</button>
-            </li>
-            <li className="text-foreground">
-              Investor @ <button onClick={() => openModal("aurora")} className="text-primary hover:underline">Aurora Beer</button>
-            </li>
-            <li className="text-foreground">
-              Music Curator @ DECIEM: The Abnormal Beauty Company
-            </li>
-            <li className="text-foreground">
-              Sound Designer @ <button onClick={() => openModal("spectra")} className="text-primary hover:underline">Vignettes — "Spectra: Interactive Art Exhibit"</button>
-            </li>
-            <li className="text-foreground">
-              Speaker @ <a href="https://www.youtube.com/watch?v=jewHIpd_jPs&t=1s" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pecha Kucha — "Why Pineapples are The World's Most Interesting Fruit"</a>
-            </li>
-            <li className="text-foreground">
-              Speaker @ Edmonton Nerd Night — "Why Pineapples are The World's Most Interesting Fruit"
-            </li>
-            <li className="text-foreground">
-              Digital Advisory Board Member @ Alberta Music
-            </li>
-            <li className="text-foreground">
-              Marketing Advisory Group Member @ Magazines Canada
-            </li>
-            <li className="text-foreground">
-              Advisory Member @ Edmonton City Council — Large-Scale Events Board
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-10 px-8 border-t border-border text-center">
-        <p className="text-muted-foreground text-sm">
-          Site made by Andrew, 2025
-        </p>
-      </footer>
+        {/* Side Quests */}
+        <section className="space-y-4">
+          <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Side Quests</h2>
+          <div className="bg-card rounded-xl p-6">
+            <ul className="space-y-3 text-foreground">
+              <li>
+                Host / Moderator / Curator @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">TPMA</a>'s monthly meet-up <span className="text-muted-foreground">2022–2025</span>
+              </li>
+              <li>
+                Podcast Guest @ <a href="https://www.youtube.com/watch?v=TEDtkkQxKtU" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Prompt & Circumstance</a>
+              </li>
+              <li>
+                Speaker @ Fuckup Nights Toronto — <a href="https://www.youtube.com/watch?v=q9uwKIoQk6M" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">"The Worst Job I've Ever Had"</a>
+              </li>
+              <li>
+                Featured Artist @ <button onClick={() => openModal("wired")} className="text-primary hover:underline">Wired Magazine 2022</button>
+              </li>
+              <li>
+                Investor @ <button onClick={() => openModal("aurora")} className="text-primary hover:underline">Aurora Beer</button>
+              </li>
+              <li>Music Curator @ DECIEM: The Abnormal Beauty Company</li>
+              <li>
+                Sound Designer @ <button onClick={() => openModal("spectra")} className="text-primary hover:underline">Vignettes — "Spectra: Interactive Art Exhibit"</button>
+              </li>
+              <li>
+                Speaker @ <a href="https://www.youtube.com/watch?v=jewHIpd_jPs&t=1s" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pecha Kucha — "Why Pineapples are The World's Most Interesting Fruit"</a>
+              </li>
+              <li>Speaker @ Edmonton Nerd Night — "Why Pineapples are The World's Most Interesting Fruit"</li>
+              <li>Digital Advisory Board Member @ Alberta Music</li>
+              <li>Marketing Advisory Group Member @ Magazines Canada</li>
+              <li>Advisory Member @ Edmonton City Council — Large-Scale Events Board</li>
+            </ul>
+          </div>
+        </section>
+      </div>
 
       {/* Portfolio Modal */}
       {activeModal && portfolioItems[activeModal] && (
