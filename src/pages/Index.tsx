@@ -36,7 +36,8 @@ const portfolioItems: Record<string, PortfolioItem> = {
   },
   wired: {
     title: "Wired Magazine — Featured Artist",
-    description: "Featured as an artist in Wired Magazine in 2022, showcasing creative work at the intersection of technology and art.",
+    description: "My art was featured in the Italian edition of Wired Magazine in 2021.",
+    images: [wired1, wired2],
   },
   aurora: {
     title: "Aurora Beer — Investor & Co-Founder",
