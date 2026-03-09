@@ -52,7 +52,8 @@ const portfolioItems: Record<string, PortfolioItem> = {
   },
   spectra: {
     title: "Spectra: Interactive Art Exhibit",
-    description: "Designed the sound for Spectra, an interactive art exhibit at the Vignettes Art and Design Festival, creating immersive audio experiences that responded to visitor interactions."
+    description: "Designed the sound for Spectra, an interactive art exhibit at the Vignettes Art and Design Festival, creating immersive audio experiences that responded to visitor interactions. Featured in Avenue Magazine.",
+    images: [spectra1, spectra2]
   }
 };
 
