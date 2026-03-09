@@ -105,6 +105,14 @@ const Index = () => {
                 The largest product management association in Canada, serving 2500 product leaders and managers in the GTA.
               </p>
             </div>
+            <div className="bg-card rounded-xl p-6 space-y-2">
+              <h3 className="text-xl font-semibold text-foreground">
+                Co-founder @ <a href="https://www.tpma.ca/conference/toronto-product-conference" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Toronto Product Conference <ExternalLink size={14} /></a>
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Canada's best product management conference, bringing together product leaders and innovators.
+              </p>
+            </div>
           </div>
         </section>
 
