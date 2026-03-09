@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ExternalLink } from "lucide-react";
 import PortfolioModal from "@/components/PortfolioModal";
 import andrewPortrait from "@/assets/andrew-portrait.png";
 
