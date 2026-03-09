@@ -158,7 +158,7 @@ const Index = () => {
                 Speaker @ Fuckup Nights Toronto — <a href="https://www.youtube.com/watch?v=q9uwKIoQk6M" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">"The Worst Job I've Ever Had" <ExternalLink size={12} /></a>
               </li>
               <li>
-                Featured Artist @ <button onClick={() => openModal("wired")} className="text-primary hover:underline">Wired Magazine 2022</button>
+                Featured Artist @ <button onClick={() => openModal("wired")} className="text-primary hover:underline">Wired Magazine 2021</button>
               </li>
               <li>
                 Investor @ <button onClick={() => openModal("aurora")} className="text-primary hover:underline">Aurora Beer</button>
