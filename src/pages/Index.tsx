@@ -2,11 +2,31 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import PortfolioModal from "@/components/PortfolioModal";
 import andrewPortrait from "@/assets/andrew-portrait.png";
+import aemc1 from "@/assets/aemc-1.jpg";
+import aemc2 from "@/assets/aemc-2.jpg";
+import aemc3 from "@/assets/aemc-3.jpg";
+import aemc4 from "@/assets/aemc-4.jpg";
 
-const portfolioItems: Record<string, { title: string; description: string }> = {
+interface PortfolioItem {
+  title: string;
+  description: string;
+  images?: string[];
+  bulletPoints?: string[];
+  additionalText?: string;
+}
+
+const portfolioItems: Record<string, PortfolioItem> = {
   aemc: {
     title: "Alberta Electronic Music Conference",
-    description: "Co-founded the Alberta Electronic Music Conference, bringing together artists, industry professionals, and music lovers to discuss and celebrate electronic music culture in Alberta.",
+    description: "I co-founded Canada's largest professional development conference for music entrepreneurs, technologists, DJs, and producers. At our peak the conference included:",
+    bulletPoints: [
+      "5 days & nights of workshops and shows split between 15+ venues in Calgary's downtown core.",
+      "800 conference delegates and over 4000-night event attendees from 50 cities",
+      "Over 160 participating speakers, panellists, and performing artists from all over the world",
+      "I led a core staff of 10 and a team of 80+ volunteers to deliver 5 years of profitable and growing operations.",
+    ],
+    additionalText: "In 2020 we moved online with the Virtual Electronic Music Summit which connected thousands of artist and music fans with 4 days of music education + performances (16 hours of content per day!). As the pandemic wore on, we closed the business to pursue new opportunities. During its time, AEMCON was the largest professional development event for electronic music industry professionals in Canada.",
+    images: [aemc1, aemc2, aemc3, aemc4],
   },
   vems: {
     title: "Virtual Electronic Music Summit",
@@ -155,6 +175,9 @@ const Index = () => {
           onOpenChange={setModalOpen}
           title={portfolioItems[activeModal].title}
           description={portfolioItems[activeModal].description}
+          images={portfolioItems[activeModal].images}
+          bulletPoints={portfolioItems[activeModal].bulletPoints}
+          additionalText={portfolioItems[activeModal].additionalText}
         />
       )}
     </div>
