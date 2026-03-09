@@ -42,7 +42,7 @@ const Index = () => {
           <div className="overflow-hidden">
             <img src={andrewPortrait} alt="Andrew" className="w-32 h-auto object-contain" style={{ transform: 'scaleX(-1)' }} />
           </div>
-          <div className="space-y-6">
+          <div className="space-y-8">
             <h1 className="font-heading text-6xl md:text-7xl leading-[0.95] text-foreground">
               I'm Andrew
             </h1>
