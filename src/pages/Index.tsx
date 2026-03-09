@@ -6,6 +6,8 @@ import aemc1 from "@/assets/aemc-1.jpg";
 import aemc2 from "@/assets/aemc-2.jpg";
 import aemc3 from "@/assets/aemc-3.jpg";
 import aemc4 from "@/assets/aemc-4.jpg";
+import wired1 from "@/assets/wired-1.jpg";
+import wired2 from "@/assets/wired-2.jpg";
 
 interface PortfolioItem {
   title: string;
