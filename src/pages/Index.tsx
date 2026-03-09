@@ -118,7 +118,7 @@ const Index = () => {
           <div className="bg-card rounded-xl p-6">
             <ul className="space-y-3 text-foreground">
               <li>
-                Host / Moderator / Curator @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">TPMA</a>'s monthly meet-up <span className="text-muted-foreground">2022–2025</span>
+                Host / Moderator / Curator @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">TPMA <ExternalLink size={12} /></a>'s monthly meet-up <span className="text-muted-foreground">2022–2025</span>
               </li>
               <li>
                 Podcast Guest @ <a href="https://www.youtube.com/watch?v=TEDtkkQxKtU" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Prompt & Circumstance</a>
