@@ -45,7 +45,8 @@ const portfolioItems: Record<string, PortfolioItem> = {
   },
   aurora: {
     title: "Aurora Beer — Investor & Co-Founder",
-    description: "Invested in and co-founded Aurora Beer, a craft beer brand blending creativity with entrepreneurship."
+    description: "Invested in and co-founded Aurora Beer, a craft beer brand blending creativity with entrepreneurship.",
+    images: [aurora1, aurora2]
   },
   spectra: {
     title: "Spectra: Interactive Art Exhibit",
