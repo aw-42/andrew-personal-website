@@ -94,7 +94,7 @@ const Index = () => {
                 Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical City <ExternalLink size={12} /></a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical Impression <ExternalLink size={12} /></a>
               </li>
               <li>
-                Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The Downtown Defrost Music & Arts Festival</a>
+                Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">The Downtown Defrost Music & Arts Festival <ExternalLink size={12} /></a>
               </li>
               <li>
                 Co-Founder @ <button onClick={() => openModal("aemc")} className="text-primary hover:underline">The Alberta Electronic Music Conference</button>
