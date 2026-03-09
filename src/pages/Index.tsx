@@ -75,7 +75,7 @@ const Index = () => {
             </div>
             <div className="bg-card rounded-xl p-6 space-y-2">
               <h3 className="text-xl font-semibold text-foreground">
-                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="hover:underline">Toronto Product Management Association</a>
+                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Toronto Product Management Association</a>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 The largest product management association in Canada, serving 2500 product leaders and managers in the GTA.
