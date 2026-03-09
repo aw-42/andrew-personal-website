@@ -38,8 +38,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <div className="max-w-2xl mx-auto px-6 py-16 space-y-16">
         {/* Hero */}
-        <section className="space-y-6">
-          <div className="overflow-hidden">
+        <section className="space-y-4">
+          <div>
             <img src={andrewPortrait} alt="Andrew" className="w-32 h-auto object-contain" style={{ transform: 'scaleX(-1)' }} />
           </div>
           <div className="space-y-8">
