@@ -12,6 +12,8 @@ import wired1 from "@/assets/wired-1.jpg";
 import wired2 from "@/assets/wired-2.jpg";
 import aurora1 from "@/assets/aurora-1.jpg";
 import aurora2 from "@/assets/aurora-2.png";
+import spectra1 from "@/assets/spectra-1.jpg";
+import spectra2 from "@/assets/spectra-2.jpg";
 
 interface PortfolioItem {
   title: string;
