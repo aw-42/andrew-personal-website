@@ -164,6 +164,12 @@ const Index = () => {
               <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Co-Founder @ <a href="https://nvmastudio.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Night Vision Music Academy <ExternalLink size={12} /></a>
               </li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
+                Digital Strategist @ <a href="https://sociallite.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Social Lite <ExternalLink size={12} /></a>
+              </li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
+                Director of Marketing Services / Assistant Publisher @ Venture Publishing
+              </li>
             </ul>
           </div>
         </AnimatedSection>
