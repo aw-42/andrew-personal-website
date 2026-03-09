@@ -12,6 +12,8 @@ import wired1 from "@/assets/wired-1.jpg";
 import wired2 from "@/assets/wired-2.jpg";
 import aurora1 from "@/assets/aurora-1.jpg";
 import aurora2 from "@/assets/aurora-2.png";
+import spectra1 from "@/assets/spectra-1.jpg";
+import spectra2 from "@/assets/spectra-2.jpg";
 
 interface PortfolioItem {
   title: string;
@@ -50,7 +52,8 @@ const portfolioItems: Record<string, PortfolioItem> = {
   },
   spectra: {
     title: "Spectra: Interactive Art Exhibit",
-    description: "Designed the sound for Spectra, an interactive art exhibit at the Vignettes Art and Design Festival, creating immersive audio experiences that responded to visitor interactions."
+    description: "Designed the sound for Spectra, an interactive art exhibit at the Vignettes Art and Design Festival, creating immersive audio experiences that responded to visitor interactions. Featured in Avenue Magazine.",
+    images: [spectra1, spectra2]
   }
 };
 
