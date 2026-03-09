@@ -97,6 +97,10 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: url('/images/texture-bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
