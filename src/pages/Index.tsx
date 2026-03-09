@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import PortfolioModal from "@/components/PortfolioModal";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 import andrewPortrait from "@/assets/andrew-portrait.png";
 import aemc1 from "@/assets/aemc-1.jpg";
 import aemc2 from "@/assets/aemc-2.jpg";
@@ -22,11 +24,11 @@ const portfolioItems: Record<string, PortfolioItem> = {
     title: "Alberta Electronic Music Conference",
     description: "I co-founded Canada's largest professional development conference for music entrepreneurs, technologists, DJs, and producers. At our peak the conference included:",
     bulletPoints: [
-    "5 days & nights of workshops and shows split between 15+ venues in Calgary's downtown core.",
-    "800 conference delegates and over 4000-night event attendees from 50 cities",
-    "Over 160 participating speakers, panellists, and performing artists from all over the world",
-    "I led a core staff of 10 and a team of 80+ volunteers to deliver 5 years of profitable and growing operations."],
-
+      "5 days & nights of workshops and shows split between 15+ venues in Calgary's downtown core.",
+      "800 conference delegates and over 4000-night event attendees from 50 cities",
+      "Over 160 participating speakers, panellists, and performing artists from all over the world",
+      "I led a core staff of 10 and a team of 80+ volunteers to deliver 5 years of profitable and growing operations."
+    ],
     additionalText: "In 2020 we moved online with the Virtual Electronic Music Summit which connected thousands of artist and music fans with 4 days of music education + performances (16 hours of content per day!). As the pandemic wore on, we closed the business to pursue new opportunities. During its time, AEMCON was the largest professional development event for electronic music industry professionals in Canada.",
     images: [aemc1, aemc2, aemc3, aemc4]
   },
@@ -49,6 +51,23 @@ const portfolioItems: Record<string, PortfolioItem> = {
   }
 };
 
+const AnimatedSection = ({ children, className, delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  return (
+    <div
+      ref={elementRef}
+      className={cn(
+        "transition-all duration-700 ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
+        className
+      )}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+};
+
 const Index = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -60,44 +79,47 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-2xl mx-auto px-6 py-16 space-y-16">
+      <div className="max-w-2xl mx-auto px-6 py-20 space-y-24">
         {/* Hero */}
-        <section className="space-y-4">
+        <AnimatedSection className="space-y-5">
           <div>
             <img src={andrewPortrait} alt="Andrew" className="w-32 h-auto object-contain" style={{ transform: 'scaleX(-1)' }} />
           </div>
-          <div className="space-y-8">
-            <h1 className="font-heading text-6xl md:text-7xl leading-[0.95] text-foreground">
+          <div className="space-y-6">
+            <h1 className="font-heading text-6xl md:text-8xl leading-[0.92] text-foreground">
               I'm Andrew
             </h1>
-            <p className="text-lg text-muted-foreground">I'm a Canadian builder and product leader focusing on creating a happier, healthier future for more people. Based in Toronto. 
-
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              I'm a Canadian builder and product leader focusing on creating a happier, healthier future for more people. Based in Toronto.
             </p>
           </div>
-          <div className="flex gap-3">
-            <a href="https://www.linkedin.com/in/andrewwilliamscanada/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card transition-colors">
+          <div className="flex gap-3 pt-2">
+            <a href="https://www.linkedin.com/in/andrewwilliamscanada/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card hover:border-primary/40 transition-all duration-200">
               <span className="text-sm font-semibold">in</span>
             </a>
-            <a href="https://x.com/andrew_reset" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card transition-colors">
+            <a href="https://x.com/andrew_reset" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card hover:border-primary/40 transition-all duration-200">
               <span className="text-sm font-semibold">𝕏</span>
             </a>
-            <a href="https://resetskillpoints.substack.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card transition-colors">
+            <a href="https://resetskillpoints.substack.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-card hover:border-primary/40 transition-all duration-200">
               <span className="text-sm font-semibold">S</span>
             </a>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Current Focus */}
-        <section className="space-y-4">
-          <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Current Focus</h2>
+        <AnimatedSection className="space-y-6" delay={100}>
+          <div className="flex items-center gap-3">
+            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Current Focus</h2>
+          </div>
           <div className="space-y-4">
-            <div className="bg-card rounded-xl p-6 space-y-2">
+            <div className="bg-card rounded-xl p-6 space-y-2 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
               <h3 className="text-xl font-semibold text-foreground">Founder @ <a href="https://heydayfocus.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Heyday <ExternalLink size={14} /></a></h3>
               <p className="text-muted-foreground leading-relaxed">
                 A product studio building tools to help people reclaim their attention in a manipulative digital world.
               </p>
             </div>
-            <div className="bg-card rounded-xl p-6 space-y-2">
+            <div className="bg-card rounded-xl p-6 space-y-2 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
               <h3 className="text-xl font-semibold text-foreground">
                 CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Toronto Product Management Association <ExternalLink size={14} /></a>
               </h3>
@@ -105,101 +127,107 @@ const Index = () => {
                 The largest product management association in Canada, serving 2500 product leaders and managers in the GTA.
               </p>
             </div>
-            <div className="bg-card rounded-xl p-6 space-y-2">
+            <div className="bg-card rounded-xl p-6 space-y-2 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
               <h3 className="text-xl font-semibold text-foreground">
                 Co-founder @ <a href="https://www.tpma.ca/conference/toronto-product-conference" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Toronto Product Conference <ExternalLink size={14} /></a>
               </h3>
-              <p className="text-muted-foreground leading-relaxed">Toronto's best product management conference, bringing together product leaders and innovators. Part of Toronto Tech Week, May 28, 2026.
-
+              <p className="text-muted-foreground leading-relaxed">
+                Toronto's best product management conference, bringing together product leaders and innovators. Part of Toronto Tech Week, May 28, 2026.
               </p>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Formerly */}
-        <section className="space-y-4">
-          <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Formerly</h2>
+        <AnimatedSection className="space-y-6" delay={100}>
+          <div className="flex items-center gap-3">
+            <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Formerly</h2>
+          </div>
           <div className="bg-card rounded-xl p-6">
-            <ul className="space-y-3 text-foreground">
-              <li>
+            <ul className="space-y-4 text-foreground">
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical City <ExternalLink size={12} /></a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical Impression <ExternalLink size={12} /></a>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">The Downtown Defrost Music & Arts Festival <ExternalLink size={12} /></a>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Co-Founder @ <button onClick={() => openModal("aemc")} className="text-primary hover:underline">The Alberta Electronic Music Conference</button>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Co-Founder @ <button onClick={() => openModal("vems")} className="text-primary hover:underline">The Virtual Electronic Music Summit</button>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Co-Founder @ <a href="https://nightvisionmusic.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Night Vision Music <ExternalLink size={12} /></a>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Co-Founder @ <a href="https://nvmastudio.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Night Vision Music Academy <ExternalLink size={12} /></a>
               </li>
             </ul>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Side Quests */}
-        <section className="space-y-4">
-          <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Side Quests</h2>
+        <AnimatedSection className="space-y-6" delay={100}>
+          <div className="flex items-center gap-3">
+            <div className="w-1.5 h-1.5 rounded-full bg-destructive" />
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Side Quests</h2>
+          </div>
           <div className="bg-card rounded-xl p-6">
-            <ul className="space-y-3 text-foreground">
-              <li>
+            <ul className="space-y-4 text-foreground">
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Host / Moderator / Curator @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">TPMA <ExternalLink size={12} /></a>'s monthly meet-up <span className="text-muted-foreground">2022–2025</span>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Podcast Guest @ <a href="https://www.youtube.com/watch?v=TEDtkkQxKtU" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Prompt & Circumstance <ExternalLink size={12} /></a>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Speaker @ Fuckup Nights Toronto — <a href="https://www.youtube.com/watch?v=q9uwKIoQk6M" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">"The Worst Job I've Ever Had" <ExternalLink size={12} /></a>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Featured Artist @ <button onClick={() => openModal("wired")} className="text-primary hover:underline">Wired Magazine 2021</button>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Investor @ <button onClick={() => openModal("aurora")} className="text-primary hover:underline">Aurora Beer</button>
               </li>
-              <li>Music Curator @ DECIEM: The Abnormal Beauty Company</li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">Music Curator @ DECIEM: The Abnormal Beauty Company</li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Sound Designer @ <button onClick={() => openModal("spectra")} className="text-primary hover:underline">Vignettes — "Spectra: Interactive Art Exhibit"</button>
               </li>
-              <li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">
                 Speaker @ <a href="https://www.youtube.com/watch?v=jewHIpd_jPs&t=1s" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Pecha Kucha — "Why Pineapples are The World's Most Interesting Fruit" <ExternalLink size={12} /></a>
               </li>
-              <li>Speaker @ Edmonton Nerd Night — "Why Pineapples are The World's Most Interesting Fruit"</li>
-              <li>Digital Advisory Board Member @ Alberta Music</li>
-              <li>Marketing Advisory Group Member @ Magazines Canada</li>
-              <li>Advisory Member @ Edmonton City Council — Large-Scale Events Board</li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">Speaker @ Edmonton Nerd Night — "Why Pineapples are The World's Most Interesting Fruit"</li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">Digital Advisory Board Member @ Alberta Music</li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">Marketing Advisory Group Member @ Magazines Canada</li>
+              <li className="border-l-2 border-border pl-4 hover:border-primary/50 transition-colors duration-200">Advisory Member @ Edmonton City Council — Large-Scale Events Board</li>
             </ul>
           </div>
-        </section>
+        </AnimatedSection>
       </div>
 
       {/* Footer */}
-      <footer className="max-w-2xl mx-auto px-6 pb-12 pt-4">
-        <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
+      <footer className="max-w-2xl mx-auto px-6 pb-16 pt-8">
+        <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
           © {new Date().getFullYear()} Andrew Williams
         </div>
       </footer>
 
       {/* Portfolio Modal */}
       {activeModal && portfolioItems[activeModal] &&
-      <PortfolioModal
-        open={modalOpen}
-        onOpenChange={setModalOpen}
-        title={portfolioItems[activeModal].title}
-        description={portfolioItems[activeModal].description}
-        images={portfolioItems[activeModal].images}
-        bulletPoints={portfolioItems[activeModal].bulletPoints}
-        additionalText={portfolioItems[activeModal].additionalText} />
-
+        <PortfolioModal
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+          title={portfolioItems[activeModal].title}
+          description={portfolioItems[activeModal].description}
+          images={portfolioItems[activeModal].images}
+          bulletPoints={portfolioItems[activeModal].bulletPoints}
+          additionalText={portfolioItems[activeModal].additionalText}
+        />
       }
-    </div>);
-
+    </div>
+  );
 };
 
 export default Index;

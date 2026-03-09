@@ -14,13 +14,12 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Once visible, we can disconnect to avoid re-triggering
           observer.disconnect();
         }
       },
       {
-        threshold: options.threshold || 0.3,
-        rootMargin: options.rootMargin || "0px",
+        threshold: options.threshold || 0.15,
+        rootMargin: options.rootMargin || "0px 0px -40px 0px",
       }
     );
 
