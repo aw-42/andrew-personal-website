@@ -10,6 +10,8 @@ import aemc3 from "@/assets/aemc-3.jpg";
 import aemc4 from "@/assets/aemc-4.jpg";
 import wired1 from "@/assets/wired-1.jpg";
 import wired2 from "@/assets/wired-2.jpg";
+import aurora1 from "@/assets/aurora-1.jpg";
+import aurora2 from "@/assets/aurora-2.png";
 
 interface PortfolioItem {
   title: string;
