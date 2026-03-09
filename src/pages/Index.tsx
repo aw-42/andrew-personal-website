@@ -103,7 +103,7 @@ const Index = () => {
                 Co-Founder @ <button onClick={() => openModal("vems")} className="text-primary hover:underline">The Virtual Electronic Music Summit</button>
               </li>
               <li>
-                Co-Founder @ <a href="https://nightvisionmusic.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music</a>
+                Co-Founder @ <a href="https://nightvisionmusic.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Night Vision Music <ExternalLink size={12} /></a>
               </li>
               <li>
                 Co-Founder @ <a href="https://nvmastudio.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music Academy</a>
