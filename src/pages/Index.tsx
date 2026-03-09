@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ExternalLink } from "lucide-react";
 import PortfolioModal from "@/components/PortfolioModal";
 import andrewPortrait from "@/assets/andrew-portrait.png";
 
@@ -68,14 +69,14 @@ const Index = () => {
           <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Current Focus</h2>
           <div className="space-y-4">
             <div className="bg-card rounded-xl p-6 space-y-2">
-              <h3 className="text-xl font-semibold text-foreground">Founder @ <a href="https://heydayfocus.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Heyday</a></h3>
+              <h3 className="text-xl font-semibold text-foreground">Founder @ <a href="https://heydayfocus.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Heyday <ExternalLink size={14} /></a></h3>
               <p className="text-muted-foreground leading-relaxed">
                 A product studio building tools to help people reclaim their attention in a manipulative digital world.
               </p>
             </div>
             <div className="bg-card rounded-xl p-6 space-y-2">
               <h3 className="text-xl font-semibold text-foreground">
-                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Toronto Product Management Association</a>
+                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Toronto Product Management Association <ExternalLink size={14} /></a>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 The largest product management association in Canada, serving 2500 product leaders and managers in the GTA.
@@ -90,10 +91,10 @@ const Index = () => {
           <div className="bg-card rounded-xl p-6">
             <ul className="space-y-3 text-foreground">
               <li>
-                Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical City</a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical Impression</a>
+                Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical City <ExternalLink size={12} /></a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical Impression <ExternalLink size={12} /></a>
               </li>
               <li>
-                Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The Downtown Defrost Music & Arts Festival</a>
+                Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">The Downtown Defrost Music & Arts Festival <ExternalLink size={12} /></a>
               </li>
               <li>
                 Co-Founder @ <button onClick={() => openModal("aemc")} className="text-primary hover:underline">The Alberta Electronic Music Conference</button>
@@ -102,10 +103,10 @@ const Index = () => {
                 Co-Founder @ <button onClick={() => openModal("vems")} className="text-primary hover:underline">The Virtual Electronic Music Summit</button>
               </li>
               <li>
-                Co-Founder @ <a href="https://nightvisionmusic.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music</a>
+                Co-Founder @ <a href="https://nightvisionmusic.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Night Vision Music <ExternalLink size={12} /></a>
               </li>
               <li>
-                Co-Founder @ <a href="https://nvmastudio.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Night Vision Music Academy</a>
+                Co-Founder @ <a href="https://nvmastudio.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Night Vision Music Academy <ExternalLink size={12} /></a>
               </li>
             </ul>
           </div>
@@ -117,13 +118,13 @@ const Index = () => {
           <div className="bg-card rounded-xl p-6">
             <ul className="space-y-3 text-foreground">
               <li>
-                Host / Moderator / Curator @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">TPMA</a>'s monthly meet-up <span className="text-muted-foreground">2022–2025</span>
+                Host / Moderator / Curator @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">TPMA <ExternalLink size={12} /></a>'s monthly meet-up <span className="text-muted-foreground">2022–2025</span>
               </li>
               <li>
-                Podcast Guest @ <a href="https://www.youtube.com/watch?v=TEDtkkQxKtU" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Prompt & Circumstance</a>
+                Podcast Guest @ <a href="https://www.youtube.com/watch?v=TEDtkkQxKtU" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Prompt & Circumstance <ExternalLink size={12} /></a>
               </li>
               <li>
-                Speaker @ Fuckup Nights Toronto — <a href="https://www.youtube.com/watch?v=q9uwKIoQk6M" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">"The Worst Job I've Ever Had"</a>
+                Speaker @ Fuckup Nights Toronto — <a href="https://www.youtube.com/watch?v=q9uwKIoQk6M" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">"The Worst Job I've Ever Had" <ExternalLink size={12} /></a>
               </li>
               <li>
                 Featured Artist @ <button onClick={() => openModal("wired")} className="text-primary hover:underline">Wired Magazine 2022</button>
@@ -136,7 +137,7 @@ const Index = () => {
                 Sound Designer @ <button onClick={() => openModal("spectra")} className="text-primary hover:underline">Vignettes — "Spectra: Interactive Art Exhibit"</button>
               </li>
               <li>
-                Speaker @ <a href="https://www.youtube.com/watch?v=jewHIpd_jPs&t=1s" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pecha Kucha — "Why Pineapples are The World's Most Interesting Fruit"</a>
+                Speaker @ <a href="https://www.youtube.com/watch?v=jewHIpd_jPs&t=1s" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Pecha Kucha — "Why Pineapples are The World's Most Interesting Fruit" <ExternalLink size={12} /></a>
               </li>
               <li>Speaker @ Edmonton Nerd Night — "Why Pineapples are The World's Most Interesting Fruit"</li>
               <li>Digital Advisory Board Member @ Alberta Music</li>
