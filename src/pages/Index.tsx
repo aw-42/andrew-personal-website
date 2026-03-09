@@ -137,7 +137,7 @@ const Index = () => {
                 Sound Designer @ <button onClick={() => openModal("spectra")} className="text-primary hover:underline">Vignettes — "Spectra: Interactive Art Exhibit"</button>
               </li>
               <li>
-                Speaker @ <a href="https://www.youtube.com/watch?v=jewHIpd_jPs&t=1s" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pecha Kucha — "Why Pineapples are The World's Most Interesting Fruit"</a>
+                Speaker @ <a href="https://www.youtube.com/watch?v=jewHIpd_jPs&t=1s" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Pecha Kucha — "Why Pineapples are The World's Most Interesting Fruit" <ExternalLink size={12} /></a>
               </li>
               <li>Speaker @ Edmonton Nerd Night — "Why Pineapples are The World's Most Interesting Fruit"</li>
               <li>Digital Advisory Board Member @ Alberta Music</li>
