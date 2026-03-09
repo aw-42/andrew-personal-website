@@ -93,14 +93,16 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans text-base;
+    @apply text-foreground font-sans text-base;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: hsl(var(--background));
     background-image: url('/images/texture-bg.png');
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-blend-mode: multiply;
   }
 
   h1, h2, h3, h4, h5, h6 {
