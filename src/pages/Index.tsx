@@ -179,6 +179,13 @@ const Index = () => {
         </section>
       </div>
 
+      {/* Footer */}
+      <footer className="max-w-2xl mx-auto px-6 pb-12 pt-4">
+        <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Andrew Williams
+        </div>
+      </footer>
+
       {/* Portfolio Modal */}
       {activeModal && portfolioItems[activeModal] &&
       <PortfolioModal
