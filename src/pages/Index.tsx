@@ -6,6 +6,8 @@ import aemc1 from "@/assets/aemc-1.jpg";
 import aemc2 from "@/assets/aemc-2.jpg";
 import aemc3 from "@/assets/aemc-3.jpg";
 import aemc4 from "@/assets/aemc-4.jpg";
+import wired1 from "@/assets/wired-1.jpg";
+import wired2 from "@/assets/wired-2.jpg";
 
 interface PortfolioItem {
   title: string;
@@ -34,7 +36,8 @@ const portfolioItems: Record<string, PortfolioItem> = {
   },
   wired: {
     title: "Wired Magazine — Featured Artist",
-    description: "Featured as an artist in Wired Magazine in 2022, showcasing creative work at the intersection of technology and art.",
+    description: "My art was featured in the Italian edition of Wired Magazine in 2021.",
+    images: [wired1, wired2],
   },
   aurora: {
     title: "Aurora Beer — Investor & Co-Founder",
