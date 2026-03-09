@@ -69,7 +69,7 @@ const Index = () => {
           <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Current Focus</h2>
           <div className="space-y-4">
             <div className="bg-card rounded-xl p-6 space-y-2">
-              <h3 className="text-xl font-semibold text-foreground">Founder @ <a href="https://heydayfocus.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Heyday</a></h3>
+              <h3 className="text-xl font-semibold text-foreground">Founder @ <a href="https://heydayfocus.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Heyday <ExternalLink size={14} /></a></h3>
               <p className="text-muted-foreground leading-relaxed">
                 A product studio building tools to help people reclaim their attention in a manipulative digital world.
               </p>
