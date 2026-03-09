@@ -22,31 +22,31 @@ const portfolioItems: Record<string, PortfolioItem> = {
     title: "Alberta Electronic Music Conference",
     description: "I co-founded Canada's largest professional development conference for music entrepreneurs, technologists, DJs, and producers. At our peak the conference included:",
     bulletPoints: [
-      "5 days & nights of workshops and shows split between 15+ venues in Calgary's downtown core.",
-      "800 conference delegates and over 4000-night event attendees from 50 cities",
-      "Over 160 participating speakers, panellists, and performing artists from all over the world",
-      "I led a core staff of 10 and a team of 80+ volunteers to deliver 5 years of profitable and growing operations.",
-    ],
+    "5 days & nights of workshops and shows split between 15+ venues in Calgary's downtown core.",
+    "800 conference delegates and over 4000-night event attendees from 50 cities",
+    "Over 160 participating speakers, panellists, and performing artists from all over the world",
+    "I led a core staff of 10 and a team of 80+ volunteers to deliver 5 years of profitable and growing operations."],
+
     additionalText: "In 2020 we moved online with the Virtual Electronic Music Summit which connected thousands of artist and music fans with 4 days of music education + performances (16 hours of content per day!). As the pandemic wore on, we closed the business to pursue new opportunities. During its time, AEMCON was the largest professional development event for electronic music industry professionals in Canada.",
-    images: [aemc1, aemc2, aemc3, aemc4],
+    images: [aemc1, aemc2, aemc3, aemc4]
   },
   vems: {
     title: "Virtual Electronic Music Summit",
-    description: "Co-founded the Virtual Electronic Music Summit, a fully online conference connecting electronic music professionals worldwide during a time when in-person events weren't possible.",
+    description: "Co-founded the Virtual Electronic Music Summit, a fully online conference connecting electronic music professionals worldwide during a time when in-person events weren't possible."
   },
   wired: {
     title: "Wired Magazine — Featured Artist",
     description: "My art was featured in the Italian edition of Wired Magazine in 2021.",
-    images: [wired1, wired2],
+    images: [wired1, wired2]
   },
   aurora: {
     title: "Aurora Beer — Investor & Co-Founder",
-    description: "Invested in and co-founded Aurora Beer, a craft beer brand blending creativity with entrepreneurship.",
+    description: "Invested in and co-founded Aurora Beer, a craft beer brand blending creativity with entrepreneurship."
   },
   spectra: {
     title: "Spectra: Interactive Art Exhibit",
-    description: "Designed the sound for Spectra, an interactive art exhibit at the Vignettes Art and Design Festival, creating immersive audio experiences that responded to visitor interactions.",
-  },
+    description: "Designed the sound for Spectra, an interactive art exhibit at the Vignettes Art and Design Festival, creating immersive audio experiences that responded to visitor interactions."
+  }
 };
 
 const Index = () => {
@@ -70,8 +70,8 @@ const Index = () => {
             <h1 className="font-heading text-6xl md:text-7xl leading-[0.95] text-foreground">
               I'm Andrew
             </h1>
-            <p className="text-lg text-muted-foreground">
-              I'm a builder, designer, and product leader focusing on creating a happier, healthier future
+            <p className="text-lg text-muted-foreground">I'm a Canadian builder and product leader focusing on creating a happier, healthier future for more people. Based in Toronto. 
+
             </p>
           </div>
           <div className="flex gap-3">
@@ -109,8 +109,8 @@ const Index = () => {
               <h3 className="text-xl font-semibold text-foreground">
                 Co-founder @ <a href="https://www.tpma.ca/conference/toronto-product-conference" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Toronto Product Conference <ExternalLink size={14} /></a>
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Canada's best product management conference, bringing together product leaders and innovators.
+              <p className="text-muted-foreground leading-relaxed">Toronto's best product management conference, bringing together product leaders and innovators. Part of Toronto Tech Week, May 28, 2026.
+
               </p>
             </div>
           </div>
@@ -180,19 +180,19 @@ const Index = () => {
       </div>
 
       {/* Portfolio Modal */}
-      {activeModal && portfolioItems[activeModal] && (
-        <PortfolioModal
-          open={modalOpen}
-          onOpenChange={setModalOpen}
-          title={portfolioItems[activeModal].title}
-          description={portfolioItems[activeModal].description}
-          images={portfolioItems[activeModal].images}
-          bulletPoints={portfolioItems[activeModal].bulletPoints}
-          additionalText={portfolioItems[activeModal].additionalText}
-        />
-      )}
-    </div>
-  );
+      {activeModal && portfolioItems[activeModal] &&
+      <PortfolioModal
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+        title={portfolioItems[activeModal].title}
+        description={portfolioItems[activeModal].description}
+        images={portfolioItems[activeModal].images}
+        bulletPoints={portfolioItems[activeModal].bulletPoints}
+        additionalText={portfolioItems[activeModal].additionalText} />
+
+      }
+    </div>);
+
 };
 
 export default Index;
