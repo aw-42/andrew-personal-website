@@ -43,9 +43,9 @@ const PortfolioModal = ({ open, onOpenChange, title, description, images, bullet
             )}
 
             {images && images.length > 0 && (
-              <div className="grid grid-cols-2 gap-2 pt-2">
+              <div className="space-y-3 pt-2">
                 {images.map((src, i) => (
-                  <img key={i} src={src} alt={`${title} photo ${i + 1}`} className="rounded-lg w-full h-40 object-cover" />
+                  <img key={i} src={src} alt={`${title} photo ${i + 1}`} className="rounded-lg w-full object-cover" />
                 ))}
               </div>
             )}
