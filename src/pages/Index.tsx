@@ -38,8 +38,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <div className="max-w-2xl mx-auto px-6 py-16 space-y-16">
         {/* Hero */}
-        <section className="space-y-6">
-          <div className="overflow-hidden">
+        <section className="space-y-4">
+          <div>
             <img src={andrewPortrait} alt="Andrew" className="w-32 h-auto object-contain" style={{ transform: 'scaleX(-1)' }} />
           </div>
           <div className="space-y-8">
@@ -68,14 +68,14 @@ const Index = () => {
           <h2 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Current Focus</h2>
           <div className="space-y-4">
             <div className="bg-card rounded-xl p-6 space-y-2">
-              <h3 className="text-xl font-semibold text-foreground">Founder @ <span className="text-foreground">Heyday</span></h3>
+              <h3 className="text-xl font-semibold text-foreground">Founder @ <a href="https://heydayfocus.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Heyday</a></h3>
               <p className="text-muted-foreground leading-relaxed">
                 A product studio building tools to help people reclaim their attention in a manipulative digital world.
               </p>
             </div>
             <div className="bg-card rounded-xl p-6 space-y-2">
               <h3 className="text-xl font-semibold text-foreground">
-                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="hover:underline">Toronto Product Management Association</a>
+                CEO @ <a href="http://tpma.ca/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Toronto Product Management Association</a>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 The largest product management association in Canada, serving 2500 product leaders and managers in the GTA.
