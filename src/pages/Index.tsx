@@ -91,7 +91,7 @@ const Index = () => {
           <div className="bg-card rounded-xl p-6">
             <ul className="space-y-3 text-foreground">
               <li>
-                Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical City</a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Vertical Impression</a>
+                Director of Product @ <a href="https://verticalcity.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical City <ExternalLink size={12} /></a> & <a href="https://verticalimpression.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">Vertical Impression <ExternalLink size={12} /></a>
               </li>
               <li>
                 Co-Founder @ <a href="https://www.downtowndefrost.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The Downtown Defrost Music & Arts Festival</a>
